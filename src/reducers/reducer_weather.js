@@ -1,3 +1,4 @@
+// Anyway we want to modify an action 
 export default function (state = null, action) {
   console.log('Action received: ', action);
   return state;
