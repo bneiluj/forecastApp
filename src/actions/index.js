@@ -14,6 +14,7 @@ export function fetchWeather(city) {
   // Make the Request
   const request = axios.get(url);
 
+  // Just concole for debugging
   console.log('Request: ', request);
   return {
     // An action always contains a type

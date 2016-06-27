@@ -10,3 +10,8 @@ Checkout this repo, install depdencies, then start the gulp process with the fol
 	> npm install
 	> npm start
 ```
+
+###Tools###
+- Redux
+- axios
+- Redux promise
