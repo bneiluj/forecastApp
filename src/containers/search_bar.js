@@ -55,7 +55,9 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
+  // This causes the action creator to be correctly dispatched
   return bindActionCreators( {fetchWeather}, dispatch );
 }
 // by passing null - just to say that this container doesn't need the state
+// because the container in this case doesn't care about the state
 export default connect(null, mapDispatchToProps) (SearchBar);
