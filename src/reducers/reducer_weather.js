@@ -11,7 +11,9 @@ export default function (state = [], action) {
       // so we need to push to the existing state
       // You can't NEVER manipulate state by assigning state
       // you have to use push
-      return state.push(action.payload.data);
+      // return state.push(action.payload.data);
+      // We can return a new instance of the state
+      return state.concat([action.payload.data]);
   }
   return state;
 }
