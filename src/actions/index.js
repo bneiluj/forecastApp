@@ -1,3 +1,5 @@
+// This code looks like synchronous but
+// it is 100% async!!!
 import axios from 'axios';
 
 // Personnal openweathermap key
@@ -14,12 +16,14 @@ export function fetchWeather(city) {
   // Make the Request
   const request = axios.get(url);
 
-  // Just concole for debugging
-  console.log('Request: ', request);
   return {
     // An action always contains a type
     type: FETCH_WEATHER,
     // Pass the axios promise to the payload
+    // We return the promise as the payload
+    // ATTENTION From REDUX - if the payload is a promise then
+    // it sops the actions
+    // it unwrap the promise for us !!!
     payload: request
   }
 }
