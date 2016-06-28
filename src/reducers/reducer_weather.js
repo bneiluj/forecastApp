@@ -13,7 +13,12 @@ export default function (state = [], action) {
       // you have to use push
       // return state.push(action.payload.data);
       // We can return a new instance of the state
-      return state.concat([action.payload.data]);
+      // return state.concat([action.payload.data]);
+      // or in ES6
+      return [ action.payload.data , ...state];
+      // Means: Take a new array, insert action.payload.data inside and
+      // ... means it must be an array so add it the new array
+      // output: [ city, city, city]
   }
   return state;
 }
