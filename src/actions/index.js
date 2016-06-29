@@ -12,7 +12,7 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 // Function to fetch weather data
 export function fetchWeather(city) {
   // Request url
-  const url = `${ROOT_URL}&q=${city},us`;
+  const url = `${ROOT_URL}&q=${city},eu`;
   // Make the Request
   const request = axios.get(url);
 
